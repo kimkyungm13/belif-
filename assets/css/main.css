@@ -529,6 +529,9 @@ section .sect-tit {}
     inset: 0;
     font-size: 18px;
     text-align: center;
+    line-height: 36px;
+    margin-left: 6px;
+    color: #222
 }
 
 .notice .controller .swiper-button-prev:after {
@@ -538,6 +541,10 @@ section .sect-tit {}
     inset: 0;
     font-size: 18px;
     text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    margin-left: 9px;
+    color: #222
 }
 
 .quick {
@@ -548,4 +555,21 @@ section .sect-tit {}
     z-index: 10;
     background: #222;
     width: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 12px;
+}
+
+.quick .bt_scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.quick .bt_btm img {
+    transform: rotate(180deg)
 }

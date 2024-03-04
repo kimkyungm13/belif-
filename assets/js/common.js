@@ -72,9 +72,17 @@ $(function () {
         ) {
             $('.quick').css('display', 'none')
         } else {
-            $('.quick').css('display', 'block')
+            $('.quick').css('display', 'flex')
         }
         lastScroll = curr
+    });
+    $('.bt_top').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+    $('.bt_btm').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
     });
 })
 

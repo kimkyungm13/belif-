@@ -70,3 +70,7 @@ img {
     max-width: 100%;
     display: block;
 }
+
+b {
+    font-weight: bold;
+}
