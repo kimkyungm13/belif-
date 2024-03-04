@@ -1,0 +1,372 @@
+@import url(/assets/css/reset.css);
+@import url(/assets/css/fonts.css);
+@import url(/assets/css/common.css);
+
+.top-banner {
+    overflow: hidden;
+}
+
+.top-banner ul li {
+    display: block;
+    text-align: center;
+}
+
+.top-banner ul li a {
+    display: block;
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.top-banner ul li.s01 {
+    background: #56bee7
+}
+
+.top-banner ul li.s02 {
+    background: #ff66ff
+}
+
+.top-banner ul li.s03 {
+    background: #ffc000
+}
+
+.top-banner ul li.s04 {
+    background: #5b9bd5
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    justify-content: space-between;
+    align-items: center;
+    height: 170px;
+    grid-template-rows: 100px 70px;
+}
+
+header.wheel {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 60;
+}
+
+header.wheel .top-banner,
+header.wheel .user,
+header.wheel .shop-group,
+header.wheel .header-top h1 {
+    display: none;
+}
+
+header.wheel .sc-logo {
+    display: block;
+}
+
+header.wheel .header-top {
+    display: flex;
+    height: 70px;
+}
+
+.header-top> :nth-child(odd) {
+    justify-self: start;
+}
+
+.header-top> :nth-child(even) {
+    justify-self: end;
+}
+
+.header-top h1 {
+    align-self: end;
+}
+
+.header-top .user {
+    display: flex;
+    position: relative;
+    gap: 24px;
+    align-self: end;
+}
+
+.header-top .user a {
+    font-size: 14px;
+    color: #999;
+}
+
+.header-top .user .cs-center {
+    position: relative;
+}
+
+.header-top .user .cs-center .cs-menu {
+    display: none
+}
+
+.header-top .user .cs-center:hover .cs-menu {
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100px;
+}
+
+.header-top .user .join {
+    position: relative;
+}
+
+.header-top .user .join .coupon {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    border-radius: 17px;
+    padding: 3px 6px 4px;
+    font-size: 12px;
+    top: -28px;
+    width: 80px;
+    right: -15px;
+    animation: joinlink 1s ease infinite;
+    text-align: center;
+}
+
+.header-top .user .join .coupon:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+}
+
+/* .gnb-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.menu-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-wrapper .menu-all {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    height: 14px;
+    width: 22px;
+    flex-direction: column;
+}
+
+.menu-wrapper .menu-all span {
+    width: 22px;
+    height: 2px;
+    background: #000;
+}
+
+.menu-wrapper .menu-all.active span {
+    position: absolute;
+    top: 6px;
+}
+
+.menu-wrapper .menu-all .line01 {
+    top: 0;
+}
+
+.menu-wrapper .menu-all .line02 {
+    top: 3px
+}
+
+.menu-wrapper .menu-all .line03 {
+    top: 6px
+}
+
+
+
+.menu-wrapper .menu-all.active .line01 {
+    transform: rotate(45deg);
+}
+
+.menu-wrapper .menu-all.active .line02 {
+    transform: rotate(-45deg);
+}
+
+.menu-wrapper .menu-all.active .line03 {
+    transform: rotate(-45deg);
+}
+
+.menu-wrapper .sc-logo {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+header.wheel .menu-wrapper .sc-logo {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    display: flex;
+    height: 70px;
+    width: 170px;
+    align-items: center;
+    margin-right: 40px;
+    transition: .3s width .2s;
+}
+
+
+.menu-wrapper .menu-box {
+    display: flex;
+    gap: 50px;
+    padding-top: 40px;
+}
+
+.menu-wrapper .menu-category {
+    display: none;
+    position: absolute;
+    top: 71px;
+    padding: 0px 100px;
+    background: #fff;
+    z-index: 2;
+}
+
+.menu-wrapper .menu-category [class*='menu-list0']>a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #434343;
+}
+
+.menu-wrapper .menu-category [class*='menu-list0']>a:after {
+    display: block;
+    content: "";
+    margin: 10px 0px 15px 0px;
+    width: 180px;
+    height: 1px;
+    background: #EAEAEA;
+}
+
+.menu-wrapper .menu-category [class*='menu-list0'] li a {
+    font-size: 14px;
+    color: #434343;
+    line-height: 1;
+    line-height: 26px;
+    transition: .3s;
+    letter-spacing: -1px;
+}
+
+.menu-wrapper .menu-category [class*='menu-list0'] li a:hover {
+    text-decoration: underline;
+}
+
+.menu-wrapper ul.category {
+    display: flex;
+    gap: 35px;
+}
+
+.menu-wrapper ul.category li a {
+    font-size: 18px;
+    color: #222;
+    padding: 0 0 10px;
+    text-decoration: none;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    transition: font .25s ease;
+}
+
+.menu-wrapper .shop-group {
+    display: flex;
+}
+
+.shop-group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 16px;
+}
+
+.shop-group .search-group {
+    position: relative;
+}
+
+.shop-group .sch-box {
+    padding: 3px;
+    width: 210px;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #000
+}
+
+.shop-group button {
+    position: absolute;
+    right: 0px;
+}
+
+.shop-group .keyword-group {
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: opacity .25s ease;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+    border-radius: 0 20px 0px 20px;
+    padding: 20px;
+    border: 0px solid #eee;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    width: 310px;
+}
+
+.shop-group:hover .keyword-group {
+    display: block;
+
+}
+
+.shop-group .key-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop-group .keyword {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 14px;
+    font-weight: bold;
+}
+
+.shop-group .key-list li a {
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px 6px;
+    color: #44bbb3;
+    transition: color .25s ease, background .25s ease;
+}
+
+.shop-group a.order {
+    background: url(/assets/images/ico-ord.png) no-repeat;
+    width: 24px;
+    height: 28px;
+    display: block;
+}
+
+footer {
+    background: #ebebeb;
+    padding: 75px 0 70px;
+}
+
+footer .inner {
+    display: flex;
+    /* gap: auto 60px; */
+}

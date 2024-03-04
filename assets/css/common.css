@@ -1,0 +1,22 @@
+section.f_layout {
+    margin: 0 0 120px 0;
+    padding: 60px 0 50px;
+}
+
+section.f_layout .inner {
+    display: flex;
+    gap: 50px;
+
+}
+
+section .sect-tit {
+    width: 270px;
+    font-size: 35px;
+    color: #000;
+    font-weight: bold;
+}
+
+section .cont-wrap {
+    flex: 1;
+    overflow: hidden;
+}
